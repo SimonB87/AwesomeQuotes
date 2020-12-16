@@ -16,4 +16,6 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## Source course link
-- [Flutter course by The Net Ninja](https://www.youtube.com/watch?v=c063ddhWafo&list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ&index=16)
+
+- Lesson 17 - 20 of the Flutter Tutorial
+- [Flutter course by The Net Ninja](https://www.youtube.com/watch?v=c063ddhWafo&list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ&index=17)
