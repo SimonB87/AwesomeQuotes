@@ -4,8 +4,8 @@ import 'quote.dart';
 class QuoteCard extends StatelessWidget {
   //use "final" to declare a not changing value in state less widget.
   final Quote quote;
-
-  QuoteCard({ this.quote });
+  final Function delete;
+  QuoteCard({ this.quote, this.delete });
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class QuoteCard extends StatelessWidget {
             ),
             SizedBox(height: 8.0,),
             FlatButton.icon(
-                onPressed: () {},
+                onPressed: delete,
                 label: Text("Delete Quote"),
                 icon: Icon(Icons.delete),
                 ),
