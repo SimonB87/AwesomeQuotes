@@ -18,7 +18,30 @@ class _QuotesListState extends State<QuotesList> {
     Quote(author: "W. C. Fields", text: "I cook with wine, sometimes I even add it to the food."),
   ];
 
-  Widget quoteTemplate(quote){
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[200],
+      appBar: AppBar(
+        title: Text("Awesome quotes!"),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
+      ),
+      body: Column(
+        children: quotes.map((quote) => QuoteCard(quote: quote)).toList(),
+      ),
+    );
+  }
+}
+
+class QuoteCard extends StatelessWidget {
+  //use "final" to declare a not changing value in state less widget.
+  final Quote quote;
+
+  QuoteCard({ this.quote });
+
+  @override
+  Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
       child: Padding(
@@ -43,21 +66,6 @@ class _QuotesListState extends State<QuotesList> {
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[200],
-      appBar: AppBar(
-        title: Text("Awesome quotes!"),
-        centerTitle: true,
-        backgroundColor: Colors.redAccent,
-      ),
-      body: Column(
-        children: quotes.map((quote) => quoteTemplate(quote)).toList(),
       ),
     );
   }
